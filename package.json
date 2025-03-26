@@ -9,7 +9,7 @@
     "web": "expo start --web"
   },
   "dependencies": {
-    "@vivocha/react-native-vivocha": "^1.0.1",
+    "@vivocha/react-native-vivocha": "^1.0.2",
     "expo": "~52.0.40",
     "expo-dev-client": "~5.0.14",
     "expo-status-bar": "~2.0.1",
