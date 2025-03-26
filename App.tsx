@@ -8,7 +8,7 @@ import {
   View,
 } from 'react-native';
 
-import Vivocha, { VivochaValues } from 'react-native-vivocha';
+import Vivocha, { VivochaValues } from '@vivocha/react-native-vivocha';
 
 const vivocha = Vivocha.instance;
 
