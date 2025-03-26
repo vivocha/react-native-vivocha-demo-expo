@@ -46,13 +46,11 @@ const vivochaServId = Platform.select({
 
 ## 📦 Using `react-native-vivocha` in Your Expo App
 
-Once published, the plugin can be installed via npm:
+The plugin can be installed via npm:
 
 ```sh
 npm install --save @vivocha/react-native-vivocha
 ```
-
-Because the plugin contains native code, you must use a **custom Expo dev client**.
 
 ### Setup Instructions
 
@@ -62,16 +60,33 @@ Because the plugin contains native code, you must use a **custom Expo dev client
    npx expo install expo-dev-client
    ```
 
-2. Build and run the app:
+2. Import and use the plugin in your code:
+
+   ```ts
+    import Vivocha from '@vivocha/react-native-vivocha';
+
+    const vivocha = Vivocha.instance;
+    
+    const servId = Platform.select({
+        android: 'XXXXXXXXXXXXXXXXXXXXXXXX-XXXXXXXXXXXXX',  // android entry point Service ID
+        ios: 'YYYYYYYYYYYYYYYYYYYYYYYY-YYYYYYYYYYYYY',  // ios entry point Service ID
+        default: '',
+    });
+    
+    vivocha
+        .start('YOUR_ACCT_ID', servId, {})
+        .then((res) => {
+            console.log('Vivocha connected result:', res);
+        })
+        .catch((err) => {
+            console.error('Vivocha connection error:', err);
+        });
+   ```
+
+3. Build and run the app:
 
    ```sh
    npx expo run:ios
    # or
    npx expo run:android
-   ```
-
-3. Import and use the plugin in your code:
-
-   ```ts
-   import Vivocha from '@vivocha/react-native-vivocha';
    ```
