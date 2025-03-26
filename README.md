@@ -1,4 +1,4 @@
-# Vivocha React Native Demo App
+# Vivocha React Native Demo App (Expo)
 
 This repository contains an **Expo-based React Native app** demonstrating how to integrate the `react-native-vivocha` plugin for live chat and customer engagement.
 
