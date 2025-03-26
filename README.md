@@ -36,9 +36,9 @@ Update the Vivocha configuration in `App.tsx`:
 ```ts
 const vivochaAcctId = 'your_account_id';
 const vivochaServId = Platform.select({
-  android: 'your_android_service_id',
-  ios: 'your_ios_service_id',
-  default:''
+    android: 'your_android_service_id',
+    ios: 'your_ios_service_id',
+    default:''
 });
 ```
 
@@ -56,37 +56,37 @@ npm install --save @vivocha/react-native-vivocha
 
 1. Install Expo Dev Client:
 
-   ```sh
-   npx expo install expo-dev-client
-   ```
+```sh
+npx expo install expo-dev-client
+```
 
 2. Import and use the plugin in your code:
 
-   ```ts
-    import Vivocha from '@vivocha/react-native-vivocha';
+```ts
+import Vivocha from '@vivocha/react-native-vivocha';
 
-    const vivocha = Vivocha.instance;
-    
-    const servId = Platform.select({
-        android: 'XXXXXXXXXXXXXXXXXXXXXXXX-XXXXXXXXXXXXX',  // android entry point Service ID
-        ios: 'YYYYYYYYYYYYYYYYYYYYYYYY-YYYYYYYYYYYYY',  // ios entry point Service ID
-        default: '',
+const vivocha = Vivocha.instance;
+
+const servId = Platform.select({
+    android: 'XXXXXXXXXXXXXXXXXXXXXXXX-XXXXXXXXXXXXX',  // android entry point Service ID
+    ios: 'YYYYYYYYYYYYYYYYYYYYYYYY-YYYYYYYYYYYYY',  // ios entry point Service ID
+    default: '',
+});
+
+vivocha
+    .start('YOUR_ACCT_ID', servId, {})
+    .then((res) => {
+        console.log('Vivocha connected result:', res);
+    })
+    .catch((err) => {
+        console.error('Vivocha connection error:', err);
     });
-    
-    vivocha
-        .start('YOUR_ACCT_ID', servId, {})
-        .then((res) => {
-            console.log('Vivocha connected result:', res);
-        })
-        .catch((err) => {
-            console.error('Vivocha connection error:', err);
-        });
-   ```
+```
 
 3. Build and run the app:
 
-   ```sh
-   npx expo run:ios
-   # or
-   npx expo run:android
-   ```
+```sh
+npx expo run:ios
+# or
+npx expo run:android
+```
