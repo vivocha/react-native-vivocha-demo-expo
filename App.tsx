@@ -113,14 +113,14 @@ function App() {
                     "desc": "First Name",
                     "name": "first_name",
                     "type": "firstname",
-                    "value": "Michael",
+                    "value": "Marty",
                     "visible": true
                 },
                 {
                     "desc": "Name",
                     "name": "last_name",
                     "type": "lastname",
-                    "value": "Siddi",
+                    "value": "McFly",
                     "visible": true
                 },
                 {
@@ -159,10 +159,12 @@ function App() {
 
     vivocha.theme = {
       [VivochaValues.THEME_CHAT_TOP_VIEW_BACKGROUND_COLOR]: randomColorHex
+      //Add all the values you need to configure the theme
     }
   }
 
   const closeContact = () => {
+    //terminates the current contact and hides the chat view (true)
     vivocha.terminate(true);
   }
 
@@ -173,6 +175,7 @@ function App() {
   const changeLanguage = () => {
     vivocha.addLocalization('de', {
       [VivochaValues.UI_BTN_CLOSE]: 'ESCI_DE'
+      //Add all the string keys to add your custom language or ovverride the built-in one
     });
     vivocha.language = 'de';
   };
