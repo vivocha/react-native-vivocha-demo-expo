@@ -156,9 +156,7 @@ function App() {
         }
     ];
 
-      vivocha.setDataCollection(dataCollection);
-
-      vivocha.createChat()
+      vivocha.createChat(dataCollection)
         .then(() => vivocha.showView(true))
         .catch(() => Alert.alert('Error creating contact', 'Errore', [{ text: 'OK' }]));
 
