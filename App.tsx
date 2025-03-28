@@ -35,6 +35,7 @@ function App() {
       terminate: logEvent,
       transferred: logEvent,
       terminatebutton: logEvent,
+      chatviewminimized: logEvent,
     };
 
     // Add event listeners for Vivocha events
@@ -60,7 +61,13 @@ function App() {
 
   const onAgentData = (event: string, data: any) => {
     logEvent(event, data);
-    setAvailable(data.available);
+
+    let hasContact = vivocha.getContact() != null;
+
+    setAvailable(data.available || hasContact);
+
+    console.log('onAgentData Available:', data.available || hasContact);
+
     setAgents(data?.data?.chat?.agents || 0);
   };
 
@@ -69,6 +76,14 @@ function App() {
     console.log('Vivocha contact:', vivocha.getContact());
     console.log('Vivocha unread messages:', vivocha.getUnreadMessageCount());
     console.log('Vivocha conversation:', vivocha.getConversation());
+
+
+    let hasAgents = agents > 0;
+    let hasContact = vivocha.getContact() != null;
+
+    console.log('onPersistence Available:', hasAgents || hasContact);
+
+    setAvailable(hasAgents || hasContact);
   };
 
 
