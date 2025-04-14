@@ -1489,7 +1489,7 @@ PODS:
     - ReactCommon/turbomodule/bridging
     - ReactCommon/turbomodule/core
     - Yoga
-  - react-native-vivocha (3.0.0):
+  - react-native-vivocha (1.9.0):
     - DoubleConversion
     - glog
     - hermes-engine
@@ -2075,7 +2075,7 @@ SPEC CHECKSUMS:
   React-logger: f9d104eace4ce03d7d5ab96802069d9905082225
   React-Mapbuffer: 23ffe602d0f5ca53b861ef8534cb8c63c4479671
   React-microtasksnativemodule: 73fdf0c53b6d50d55de2d5bd9abfb8c006b043a4
-  react-native-vivocha: a139f9deb6226ebb347ffc3f0877691618084ee2
+  react-native-vivocha: 0bc63a5e144ed9e69369b8c66df753cb8ed2534a
   React-nativeconfig: 67fa7a63ea288cb5b1d0dd2deaf240405fec164f
   React-NativeModulesApple: cbf1a34443e1f67b56344547f4b0af69e1c685ba
   React-perflogger: f02ee21d98773121d77993b3c1a8be445840fae3
