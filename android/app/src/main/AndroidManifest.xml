@@ -24,9 +24,8 @@
         <action android:name="android.intent.action.VIEW"/>
         <category android:name="android.intent.category.DEFAULT"/>
         <category android:name="android.intent.category.BROWSABLE"/>
-        <data android:scheme="com.anonymous.vivochademoexpo"/>
-        <data android:scheme="exp+vivocha-demo-expo"/>
         <data android:scheme="com.vivochademo"/>
+        <data android:scheme="exp+vivocha-demo-expo"/>
       </intent-filter>
     </activity>
   </application>
