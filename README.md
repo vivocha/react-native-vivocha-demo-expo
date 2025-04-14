@@ -60,7 +60,15 @@ npm install --save @vivocha/react-native-vivocha
 npx expo install expo-dev-client
 ```
 
-2. Import and use the plugin in your code:
+2. Update your app.json file to use the plugin
+
+```json
+"plugins": [
+    "@vivocha/react-native-vivocha"
+]
+```
+
+3. Import and use the plugin in your code:
 
 ```ts
 import Vivocha from '@vivocha/react-native-vivocha';
@@ -83,7 +91,7 @@ vivocha
     });
 ```
 
-3. Build and run the app:
+4. Build and run the app:
 
 ```sh
 npx expo run:ios
