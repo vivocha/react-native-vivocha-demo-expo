@@ -50,6 +50,8 @@ The plugin can be installed via npm:
 
 ```sh
 npm install --save @vivocha/react-native-vivocha
+npm install --save @vivocha/react-native-vivocha-shared-frameworks
+
 ```
 
 ### Setup Instructions
