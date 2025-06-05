@@ -8,6 +8,8 @@ import {
   View,
 } from 'react-native';
 
+import { Image } from 'expo-image';
+
 import Vivocha, { VivochaValues } from '@vivocha/react-native-vivocha';
 
 const vivocha = Vivocha.instance;
@@ -205,8 +207,18 @@ function App() {
     console.log('Received vivocha event from agent:', name, id, data);
   };
 
+  const blurhash =
+  '|rF?hV%2WCj[ayj[a|j[az_NaeWBj@ayfRayfQfQM{M|azj[azf6fQfQfQIpWXofj[ayj[j[fQayWCoeoeaya}j[ayfQa{oLj?j[WVj[ayayj[fQoff7azayj[ayj[j[ayofayayayj[fQj[ayayj[ayfjj[j[ayjuayj[';
+
   return (
     <View style={styles.container}>
+     <Image
+        style={styles.image}
+        source="https://picsum.photos/seed/696/3000/2000"
+        placeholder={{ blurhash }}
+        contentFit="cover"
+        transition={1000}
+      />
       <Text style={styles.title}>Vivocha React Native Demo App</Text>
       <Text>Status: {status}</Text>
       <Text>Agents: {agents}</Text>
@@ -226,6 +238,11 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  image: {
+    width: '100%',
+    height: '30%',
+    backgroundColor: '#0553',
   },
   title: {
     fontSize: 24,
